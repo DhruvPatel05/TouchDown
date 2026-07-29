@@ -14,7 +14,7 @@ struct FooterView: View {
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
                 .layoutPriority(2)
-            Image("logo-linea1")
+            Image("logo-lineal")
                 .renderingMode(.template)
                 .foregroundColor(.gray)
             Text("Copyrigtht © Dhruv Patel\nAll right reserved")
@@ -31,5 +31,7 @@ struct FooterView: View {
 struct FooterView_Previews: PreviewProvider {
     static var previews: some View {
         FooterView()
+            .previewLayout(.sizeThatFits)
+            .background(colorBackground)
     }
 }
