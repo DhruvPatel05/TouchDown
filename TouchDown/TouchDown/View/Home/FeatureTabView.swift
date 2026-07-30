@@ -21,6 +21,8 @@ struct FeatureTabView: View {
             }
         }//:TAB
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
+        .frame(height: 200)
     }
 }
 
