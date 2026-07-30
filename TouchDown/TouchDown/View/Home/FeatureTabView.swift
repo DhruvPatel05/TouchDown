@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct FeatureTabView: View {
+    
+    // MARK: -  PREOPERTIES
+
+    // MARK: -  BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            ForEach(players) { player in
+                FeaturedItemView(player:player)
+                    .padding(.top,10)
+                    .padding(.horizontal,15)
+            }
+        }//:TAB
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }
 }
 
-#Preview {
-    FeatureTabView()
+// MARK: -  PREVIEW
+struct FeaturedTabView_previews: PreviewProvider {
+    static var previews: some View {
+        FeatureTabView()
+            .previewDevice("iPhone 17 Pro")
+            .background(Color.gray)
+    }
 }
