@@ -19,6 +19,7 @@ struct FeaturedItemView: View {
             .resizable()
             .scaledToFit()
             .cornerRadius(12)
+            .frame(width: UIScreen.main.bounds.width-20)
     }
 }
 
