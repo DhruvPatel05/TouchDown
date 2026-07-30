@@ -23,10 +23,15 @@ struct ContentView: View {
                     .background(Color.white)
                     .shadow(color:Color.black.opacity(0.05),radius: 5,x:0,y:5)
                 
-                Spacer()
-                
-                FooterView()
-                    .padding(.horizontal)
+                ScrollView(.vertical,showsIndicators: false,content: {
+                    VStack(spacing:0) {
+                        FeatureTabView()
+                            .padding(.vertical,20)
+                        
+                        FooterView()
+                            .padding(.horizontal)
+                    }//:VSTACK
+                })//: SCROLLVIEW
             }// : VSTACK
             
             .background(colorBackground.ignoresSafeArea(.all,edges:.all))
@@ -39,7 +44,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewDevice("iPhone 12 Pro")
+            .previewDevice("iPhone 17 Pro")
     }
 }
 
