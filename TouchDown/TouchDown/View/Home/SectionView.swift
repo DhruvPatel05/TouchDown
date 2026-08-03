@@ -1,5 +1,5 @@
 //
-//  SecitonView.swift
+//  SectionView.swift
 //  TouchDown
 //
 //  Created by Dhruv Patel on 30/07/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SecitonView: View {
+struct SectionView: View {
     // MARK: -  PROPERTIES
     @State var rotateClockwise: Bool
 
@@ -31,7 +31,7 @@ struct SecitonView: View {
    // MARK: -  PREVIEW
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SecitonView(rotateClockwise: false)
+        SectionView(rotateClockwise: false)
             .previewLayout(.fixed(width: 120, height: 240))
             .padding()
             .background(colorBackground)
