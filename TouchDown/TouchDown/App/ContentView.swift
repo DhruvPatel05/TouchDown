@@ -28,6 +28,7 @@ struct ContentView: View {
                         FeatureTabView()
                             .padding(.vertical,20)
                         CategoryGridView()
+                        TitleView(title: "Helmets")
                         FooterView()
                             .padding(.horizontal)
                     }//:VSTACK
