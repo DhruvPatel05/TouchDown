@@ -15,7 +15,27 @@ struct ProductItemView: View {
     
     // MARK: -  BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 6, content:  {
+            // PHOTO
+            ZStack {
+                Image(product.image)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(10)
+            }//: ZSTACK
+            .background(Color(red:product.color[0],green:product.color[1],blue:product.color[2]))
+            .cornerRadius(12)
+            
+            //NAME
+            Text(product.name)
+                .font(.title3)
+                .fontWeight(.black)
+            
+            //PRICE
+            Text("$\(product.price)")
+                .fontWeight(.semibold)
+                .foregroundColor(.gray)
+        })//: VSTACK
     }
 }
 
