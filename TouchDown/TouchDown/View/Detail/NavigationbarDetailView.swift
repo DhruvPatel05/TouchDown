@@ -20,6 +20,11 @@ struct NavigationbarDetailView: View {
                     .foregroundColor(.white)
             })
             Spacer()
+            Button(action: {}, label:{
+                Image(systemName: "cart")
+                    .font(.title)
+                    .foregroundColor(.white)
+            })
         }
     }
 }
