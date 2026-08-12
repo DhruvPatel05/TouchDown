@@ -13,7 +13,14 @@ struct NavigationbarDetailView: View {
     
     // MARK: -  BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Button(action: {}, label:{
+                Image(systemName: "chevron.left")
+                    .font(.title)
+                    .foregroundColor(.white)
+            })
+            Spacer()
+        }
     }
 }
 
@@ -22,5 +29,8 @@ struct NavigationbarDetailView: View {
 struct NavigationbarDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationbarDetailView()
+            .previewLayout(.sizeThatFits)
+            .padding()
+            .background(Color.gray)
     }
 }
