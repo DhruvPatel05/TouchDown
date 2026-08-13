@@ -13,7 +13,20 @@ struct TopPartDetailView: View {
     
     // MARK: -  BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .center,spacing: 6, content: {
+            //:PRICE
+            VStack(alignment: .leading,spacing: 6, content: {
+            Text("Price")
+                .fontWeight(.semibold)
+            Text(sampleProduct.formattedPrice)
+                .font(.largeTitle)
+                .fontWeight(.black)
+                .scaleEffect(1.35,anchor:.leading)
+            })
+            Spacer()
+            //:PHOTO
+            
+        })//:HSTACK
     }
 }
 
