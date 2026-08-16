@@ -26,6 +26,7 @@ struct ProductDetailView: View {
          // DETAIL TOP PART
             TopPartDetailView()
                 .padding(.horizontal)
+                .zIndex(1)
          // DETAIL BOTTOM PART
             VStack(alignment: .center, spacing: nil,content: {
                 
@@ -43,8 +44,12 @@ struct ProductDetailView: View {
             Spacer()
             })
             .padding(.horizontal)
-            .background(Color.white)
+            .background(Color.white
+                .clipShape(CustomShape())
+                .padding(.top,-105)
+            )
         })//: VSTACK
+        .zIndex(0)
         .ignoresSafeArea(.all,edges: .all)
         .background(
             Color(red:sampleProduct.red,green:sampleProduct.green,blue:sampleProduct.blue)
