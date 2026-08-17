@@ -16,7 +16,10 @@ struct RatingSizeDetailview: View {
 
 
     var body: some View {
-        
+        HStack(alignment: .top,spacing: 3, content: {
+            Spacer()
+            //SIZES
+        })//: HSTACK
     }
 }
 
