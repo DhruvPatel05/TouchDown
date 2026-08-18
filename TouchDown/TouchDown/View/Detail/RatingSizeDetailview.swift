@@ -9,12 +9,9 @@ import SwiftUI
 
 struct RatingSizeDetailview: View {
     // MARK: -  PROPERTY
-    
+    let sizes: [String] = ["XS","S","M","L","XL"]
     
     // MARK: -  BODY
-    
-
-
     var body: some View {
         HStack(alignment: .top,spacing: 3, content: {
             VStack(alignment: .leading, spacing: 3, content: {
@@ -36,6 +33,19 @@ struct RatingSizeDetailview: View {
             })
             Spacer()
             //SIZES
+            VStack(alignment: .trailing,spacing:3, content: {
+                Text("Sizes")
+                    .font(.footnote)
+                    .fontWeight(.semibold)
+                    .foregroundColor(colorGray)
+                
+                HStack(alignment: .center,spacing: 5, content: {
+                    ForEach(sizes,id:\.self){
+                        size in
+                        
+                    }
+                })
+            })
         })//: HSTACK
     }
 }
