@@ -42,7 +42,16 @@ struct RatingSizeDetailview: View {
                 HStack(alignment: .center,spacing: 5, content: {
                     ForEach(sizes,id:\.self){
                         size in
-                        
+                        Button(action:{},label: {
+                            Text(size)
+                                .font(.footnote)
+                                .fontWeight(.heavy)
+                                .foregroundColor(colorGray)
+                                .frame(width:28,height:28,alignment: .center)
+                                .background(Color.white.cornerRadius(5))
+                                .background(RoundedRectangle(cornerRadius: 5)
+                                    .stroke(colorGray,lineWidth: 2))
+                        })
                     }
                 })
             })
