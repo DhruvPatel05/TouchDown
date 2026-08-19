@@ -32,6 +32,10 @@ struct ProductDetailView: View {
                 
             
          // RATINGS + SIZES
+                RatingSizeDetailview()
+                    .padding(.top,-25)
+                    .padding(.bottom,10)
+                
          // DESCRIPTION
                 ScrollView(.vertical,showsIndicators: false,content: {
                     Text(sampleProduct.description)
