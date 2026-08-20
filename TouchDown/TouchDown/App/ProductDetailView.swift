@@ -44,6 +44,8 @@ struct ProductDetailView: View {
                         .multilineTextAlignment(.leading)
                 }) //:SCROLLVIEW
          // QUANTITY + FAVOURITE
+                QuantityFavouriteDetailView()
+                    .padding(.vertical,10)
          // ADD TO CART
             Spacer()
             })
