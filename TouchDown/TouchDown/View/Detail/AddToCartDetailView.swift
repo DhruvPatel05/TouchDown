@@ -17,6 +17,9 @@ struct AddToCartDetailView: View {
         Button(action: {}, label: {
             Spacer()
             Text("Add to cart".uppercased())
+                .font(.system(.title2,design: .rounded))
+                .fontWeight(.bold)
+                .foregroundColor(.white)
             Spacer()
         }) //: BUTTON
         .padding(15)
