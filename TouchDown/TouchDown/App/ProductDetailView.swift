@@ -47,6 +47,8 @@ struct ProductDetailView: View {
                 QuantityFavouriteDetailView()
                     .padding(.vertical,10)
          // ADD TO CART
+                AddToCartDetailView()
+                    .padding(.bottom,20)
             Spacer()
             })
             .padding(.horizontal)
