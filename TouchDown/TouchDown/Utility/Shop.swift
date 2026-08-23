@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Combine
 
-class Shop {
-    var showingProduct: Bool = false
-    var selectedProduct: Product? = nil
+class Shop: ObservableObject {
+    @Published var showingProduct: Bool = false
+    @Published var selectedProduct: Product? = nil
 }
